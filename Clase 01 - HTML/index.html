@@ -1,0 +1,95 @@
+<!--
+    Este es un comentario dentro de un archivo HTML.
+    Al abrir el archivo en VSC, Atom u otro editor, generalmente los comentarios
+    se verán de color gris.
+    Los comentarios pueden ir en cualquier lugar de la página.
+    Hay que tener cuidado de que los comentarios los puede ver cualquier persona
+    que inspeccione el código.
+
+    Importante: tener mucho cuidado con la indentación. Ser prolijo ayuda mucho.
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hack Academy - Clase 01</title>
+  </head>
+
+  <body>
+    <h1>Hack Academy - Clase 01</h1>
+
+    <p>Primer párrafo.</p>
+
+    <h2 id="seccion1">Sección 1</h2>
+
+    <p>
+      Segundo párrafo. Notar que las etiquetas "p" se colocaron en líneas nuevas
+      (a diferencia del párrafo anterior donde se pusieron las etiquetas y el
+      contenido dentro de la misma línea).
+    </p>
+
+    <p>
+      Tercer párrafo y que además tiene<br />
+      un salto de línea.
+    </p>
+
+    <h2 id="seccion2">Sección 2</h2>
+
+    <p>
+      Cuarto párrafo. Este contiene palabras con <em>énfasis</em> y con
+      <strong>negrita</strong>.
+    </p>
+
+    <h2>Una lista de elementos sin numerar:</h2>
+    <ul>
+      <li>item de la lista usa “bullets” por defecto</li>
+      <li>cada item va dentro de un tag</li>
+      <li>no hay límites de items</li>
+    </ul>
+
+    <h2>Una lista de elementos enumerada:</h2>
+    <ol>
+      <li>números en lugar de bullets</li>
+      <li>siempre dentro de estos tags</li>
+    </ol>
+
+    <h2>Una imagen con ruta absoluta:</h2>
+    <img
+      src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+      alt="Logo de HTML5"
+      width="300"
+      height="300"
+    />
+
+    <h2>Una imagen con ruta relativa:</h2>
+    <img
+      src="img/javascript_logo.png"
+      alt="Logo de HTML5"
+      width="200"
+      height="200"
+    />
+
+    <div id="seccion-links">
+      <h2>Ejemplos de links</h2>
+      <ul>
+        <li>
+          Link a una página externa:
+          <a href="http://www.google.com" target="_blank">Google</a>.
+        </li>
+        <li>
+          Link a una página interna:
+          <a href="sobre-nosotros.html">Sobre Nosotros</a>.
+        </li>
+        <li>
+          Link a una sección dentro de la misma página:
+          <a href="#seccion1">Sección número 1</a>.
+        </li>
+        <li>
+          Link a una sección dentro de la misma página:
+          <a href="#seccion2">Sección número 2</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
