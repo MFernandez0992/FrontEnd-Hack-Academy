@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 02 - CSS</title>
+
+    <style>
+        .li{
+            color: rgb(61, 178, 255);
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <h1>Clase 02 - CSS</h1>
@@ -20,6 +27,47 @@
     </p>
 
     <img src="imagen.jpg" alt="Imágen de ejemplo">
+
+    <!-- Elementos de tipo Block e Inline 
+    
+    Block - Es un elemento que ocupa todo el ancho de su elemento padre (contenedor), generando un saldo de línea antes y después de sí mismo.
+    Se dice que genera un "bloque
+
+    Elementos block por defecto - <h1>, <h2>, <div>, <p>, <ul>, <ol>, <form>.
+
+    Inline - Es un elemento que ocupa solo el ancho que precisa y no genera saltos de línea 
+
+    Elementos Inline por defecto: <a>, <img>, <em>, <i>, <b>, <button>, <strong>, <span>.
+"-->
+
+<!-- Ejemplo de código CSS 
+<style>
+    body{
+        color: blue;
+        background-color: green;
+    }
+</style>
+
+    -->
+<br>
+<br>
+<h2>Tipo de selectores en CSS</h2>
+<ul>
+    <li class="li">Element</li> <p>Esto selecciona todos los elementos p en el documento.</p>
+    <li class="li">Class</li> <p>Un elemento puede tener un único id pero múltiples class, lo cual permite tener gran flexibilidad si se usa correctamente.</p>
+    <li class="li">ID</li> <p>Con el numeral (#) se le indica a CSS que un selector es de tipo id.Esto selecciona el (único) elemento HTML que tenga id=pepito.No importa qué elemento (etiqueta) HTML sea. En este ejemplo se trata de un p</p>
+    <li class="li">Pseudo classes</li> <p>Esto selecciona sólo los elementos del tipo seleccionado con class especificas del usuario.</p>
+</ul>
+<br>
+<br>
+<h2>Jerarquía de selectores CSS</h2> <p>Primera aproximación</p>
+
+<p>Reglas:</p>
+<ul>
+    <li>Los <strong>ID</strong> son más específicos qeu los <strong>class</strong></li>
+    <li><strong>class</strong> es más específico que <strong>element</strong></li>
+    <li>Si dos reglas son igual de específicas, la última gana.</li>
+</ul>
 
 </body>
 </html>
