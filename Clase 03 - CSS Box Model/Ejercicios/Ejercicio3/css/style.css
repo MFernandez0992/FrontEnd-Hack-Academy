@@ -1,0 +1,47 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor-general{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.stripe-top{
+    background-color: green;
+    width: 100%;
+    height: 100px;
+}
+
+.stripe-top-left{
+    background-color: #f44336;
+    width: 50%;
+    height: 100px;
+}
+
+
+.stripe-middle{
+    background-color: #fdd835;
+    width: 100%;
+    font-size: 3rem;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    height: 100px;
+}
+
+.stripe-bottom{
+   width: 100%;
+   height: 100px;
+   background-color: #0d47a1;
+}
+
+.stripe-bottom-middle{
+    width: 33.333%;
+    height: 100px;
+    background-color: #03a9f4;
+    margin: 0 auto;
+}
