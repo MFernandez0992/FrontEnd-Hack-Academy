@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    /* Lo ideal es siempre utilizar box-sizing:border-box; aplicado a todos los elementos de la página
+     */
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border: 3px solid blue;
+    margin: 20px auto;
+
+    /* 
+    Cuando dos elementos tienen como propiedades margenes que quedan entre medio, los márgenes NO se suman, se colapsan, por ejemplo si la caja 1 tiene un margin-bottom de 20px y la caja 2 un margin-top de 20px, la distancia entre una y otra es de 20px (o el mayor de ambos), NO SE SUMAN los márgenes.
+     */
+    
+     /* 
+    Las cajas son elemento de tipo Block por lo que generan saltos de línea
+     */
+
+
+    /* Cuando aplico padding a un box, el tamaño real de la caja aumento sumándole el tamaño del padding y del borde.
+    Por defecto las cajas mantienen el tamaño del contenido fijo.
+    
+    Esto se puede prevenir utilizando Box-Sizing
+    
+    Por defecto las cajas traen la propiedad box-sizing: content-box, que sumará el padding al tamaño de la caja
+    
+    Utilizando box-sizing: border-box; el tamaño total de la caja con padding y borde será el tamaño que le definimos, en este caso 200px*200px, reduciendo el tamaño del contenido adaptando el padding.
+    */
+}
