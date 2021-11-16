@@ -1,0 +1,28 @@
+*{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bolder;
+    margin: unset;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(62, 146, 255);
+}
+
+.sidebar{
+    width: 10%;
+    height: 500px;
+    background-color: rgb(255, 117, 62);
+}
+
+.content{
+    width: 90%;
+    height: 500px;
+    background-color: rgb(38, 143, 38);
+    position: relative;
+    left: 10%;
+    bottom: 500px;
+}
