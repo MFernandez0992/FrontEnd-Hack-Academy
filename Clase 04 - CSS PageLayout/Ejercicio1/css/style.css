@@ -3,17 +3,24 @@
 }
 
 body{
+    background-image: url(../img/benjamin-raffetseder-HDIUUSO5C8g-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 0;
     margin: 0;
     color: white;
+<<<<<<< HEAD
     background-image: url(../img/benjamin-raffetseder-HDIUUSO5C8g-unsplash.jpg);
     background-size: cover;
+=======
+>>>>>>> 151564e103ec091d252f1e12c8cae151a7aa67e2
 }
 
 h1{
     font-size: 60px;
+    margin-top: 30%;
 }
 
 a{
@@ -23,6 +30,7 @@ a{
     border: 1px solid white;
     padding: 10px 20px;
     text-decoration: none ;
+<<<<<<< HEAD
 }
 
 .contenedor-principal{
@@ -34,4 +42,6 @@ a{
 .texto-contenedor{
     margin-top: 0;
     top: 200px;
+=======
+>>>>>>> 151564e103ec091d252f1e12c8cae151a7aa67e2
 }
