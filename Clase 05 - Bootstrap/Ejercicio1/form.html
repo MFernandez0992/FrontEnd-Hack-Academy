@@ -38,7 +38,22 @@
                 <label for="femenino" type="radio" class="form-check-label">Femenino</label>
                 <input id="femenino" class="form-check-input" name="sexo" type="radio">
             </div>
-            <div class="mb-3"></div>
+            <div class="mb-3">
+                <label for="pais">País</label>
+                <select name="pais" id="pais">
+                    <option value="-1">Seleccione...</option>
+                    <option value="ar">Argentina</option>
+                    <option value="br">Brasil</option>
+                    <option value="uy">Uruguay</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="textarea">Describa la situación</label>
+                <textarea name="textarea" id="" cols="30" rows="3"></textarea>
+            </div>
+
+            <input type="button" value="Enviar">
         </form>
     </div>
 </body>
