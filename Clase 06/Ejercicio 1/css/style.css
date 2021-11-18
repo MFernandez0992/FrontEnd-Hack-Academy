@@ -1,0 +1,26 @@
+.navbar{
+    background-color: #FFFF00;
+}
+
+.nav-link:hover{
+    color: #FFD600;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.footer{
+    font-size: 15px;
+    color: white;
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+
+.header{
+    height: 250px;
+    background-image: url("../img/playa.jpg");
+    background-size: cover;
+}
