@@ -41,3 +41,29 @@ function validarAnioNacimiento(anio) {
 }
 
 validarAnioNacimiento(1929);
+
+
+function sueldoLiquido(sueldoBruto) {
+    var descuento = 0.8;
+    return sueldoBruto * descuento;
+}
+
+sueldoLiquido(15000);
+
+// Si quiero guardar el valor en una variable
+var salario = sueldoLiquido(20000);
+console.log(salario);
+
+// Horario de negocio
+
+function horarioNegocio(horas) {
+    if (horas < 9) {
+        alert("El negocio está abierto")
+    } else if (horas <0) {
+        alert("Es muy temprano")
+    } else if(horas > 18){
+        alert('Es muy tarde')
+    } 
+}
+
+horarioNegocio(23);
