@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS y DOM</title>
+
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+
+    <button id="btn-guardar">Guardar</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="https://ha.edu.uy">Hack Academy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarLinks"
+          aria-controls="navbarLinks"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          id="navbarLinks"
+          class="collapse navbar-collapse justify-content-end"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trabajos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ayuda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg-light p-5 mb-3">
+      <div class="container">
+        <h1 class="display-4">¡Hola mundo!</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a class="btn btn-success btn-lg" href="#" role="button">
+          Más información &raquo;
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="text-primary">Productos</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+            tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+          </p>
+          <a class="btn btn-primary mb-5 mb-md-3" href="#" role="button"
+            >Ver detalles &raquo;</a
+          >
+        </div>
+
+        <div class="col-md-4">
+          <h2 class="text-danger">Servicios</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+            tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+          </p>
+          <a class="btn btn-danger mb-5 mb-md-3" href="#" role="button"
+            >Ver detalles &raquo;</a
+          >
+        </div>
+
+        <div class="col-md-4">
+          <h2 class="text-warning">Trabajos</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+            tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+          </p>
+          <a class="btn btn-warning mb-5 mb-md-3" href="#" role="button"
+            >Ver detalles &raquo;</a
+          >
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <!-- Esto es un línea horizontal (Horizontal Line) -->
+
+      <div class="row">
+        <div class="col-md-9">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+            tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Donec sed odio dui.
+          </p>
+          <p>
+            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus.
+          </p>
+          <a
+            class="btn btn-outline-secondary mb-4 mb-md-0"
+            href="#"
+            role="button"
+            >Ver detalles &raquo;</a
+          >
+        </div>
+
+        <div class="col-md-3">
+          <h3>Tecnologías</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="mt-4" />
+      <!-- Esto es un línea horizontal (Horizontal Line) -->
+
+      <footer class="mt-4 mb-4">
+        <p>&copy; 2021 Hack Academy.</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
