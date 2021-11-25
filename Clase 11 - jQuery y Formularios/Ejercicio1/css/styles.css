@@ -1,0 +1,22 @@
+body{
+    padding: 40px 0;
+}
+
+.left-column{
+    background-color: #eceff1;
+    border: 1px solid #b0bec5;
+}
+
+.right-column{
+    background-color: #FFF8E1;
+    border: 1px solid #FFE082;
+}
+
+.div-content{
+    border-radius: 8px;
+    padding: 30px 15px;
+}
+
+.legend-size{
+    font-size: 1rem;
+}
