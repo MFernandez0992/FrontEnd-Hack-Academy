@@ -1,0 +1,18 @@
+.estiloContainerLista{
+    background-color: rgb(245, 245, 245);
+    border: 1px solid gray;
+    border-radius: 15px;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .menuEdicion{
+      background-color: rgb(255, 245, 219);
+      border: 1px solid yellow;
+      border-radius: 15px;
+  }
