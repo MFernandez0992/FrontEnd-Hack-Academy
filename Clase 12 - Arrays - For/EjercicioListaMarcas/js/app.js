@@ -28,6 +28,7 @@ $(mostrar).on("click", function mostrarMarcas() {
 
 // Función que agregará las nuevas marcas al array
 $(agregar).on("click", function () {
+
     // Extraigo el valor del input y lo almaceno en una variable
     var valorInput = $('input').val();
 
@@ -51,7 +52,7 @@ $(eliminar).on('click', function() {
 
 // PENDIENTE
 /* 
-    - Que botón mostrar no repite el ul
+    - Que botón mostrar no repita el ul
     - Que eliminar item refresque el ul
     - Que agregar marca refresque el ul
     - Que no se puedan agregar marcas repetidas, si se intenta agregar alguna lanzar un msj de alerta
