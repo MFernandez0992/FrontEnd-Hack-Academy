@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CSS de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+   
+    <div id="app" class="container mt-4">
+      <div class="row">
+        <div class="col-3">
+          <div class="caja">
+            <form>
+              <div class="mb-3">
+                <label for="busquedaPelicula" class="form-label"
+                  >Buscar película</label
+                >
+                <input type="text" v-model="busqueda" class="form-control" id="busquedaPelicula" />
+              </div>
+              <button id="botonBusqueda" type="button" class="btn btn-success">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="caja">
+            <h1>Buscador de películas</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus delectus cumque ipsa velit ipsum excepturi!</p>
+          </div>
+
+          <div class="caja">
+          <div class="row">
+            <div class="col">
+              <img src="" alt="">
+            </div>
+            <div class="col">
+              <h1>Título</h1>
+              <h2>Director</h2>
+              <h3>Argumentos</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat ex inventore beatae sint architecto assumenda vitae, suscipit aperiam perspiciatis, ipsam, explicabo corrupti. Illo sequi, impedit repellendus dolor eligendi ducimus quasi?</p>
+              <h3>Actores</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JS de Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS de Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- JS Propio -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
