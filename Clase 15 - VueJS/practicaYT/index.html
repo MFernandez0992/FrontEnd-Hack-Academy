@@ -26,9 +26,12 @@
 
     <div id="tutorialYouTubeHA">
       <h1>{{title}} ({{year}})</h1>
+
+      <!-- Insertar un valor de data Vue dentro de un atributo HTML, en este caso una imagen, con v-bind:attr -->
+      <img v-bind:src="imageUrl" alt="">
       <h2>Se dedica a: {{descripcion}}</h2>
       <ul>
-        <li v-for="course in courses"> {{ course }} </li>
+        <li v-for="course in courses"> Curse: {{ course.name }} - Carga horaria: {{course.hours}}hs</li>
       </ul>
 
       <!-- Con v-model puedo hacer un two way binding entre el input y el elemento que le asigne -->
