@@ -4,7 +4,6 @@ var app = new Vue({
         usuarioBuscoPelicula: false,
         busqueda: '',
         resultado: null,
-
     }
 });
 
@@ -13,8 +12,9 @@ var app = new Vue({
 function buscarPelicula(){
 
     // Declaro la dirección de la api con la extensión de busqueda dentro de una variable url
-    var url = "https://private.omdbapi.com/?apikey=bef9c583&t=" + app.busqueda;
-    console.log('Petición a ' + url),
+    var url = `https://private.omdbapi.com/?apikey=bef9c583&t=${app.busqueda}`;
+
+    // var sitioImbd = `https://www.imdb.com/title/${resultado.imdbID}/`;
 
     // Con ajax me comunico con el servicio con la variable url y la respuesta de la api la guardo dentro de la variable 'resultado' de la app
     $.ajax({
