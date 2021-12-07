@@ -95,12 +95,47 @@
       <div class="container">
         <div class="row">
           <div class="col-6"><h1>Ventas</h1></div>
-          <div class="col-6"><div class="text-end">UYU-USD</div></div>
+          <div class="col-6"><div class="text-end"><i class="fas fa-exchange-alt"></i> UYU/USD 45.00</div></div>
         </div>
 
         <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
+          <div class="col-3">
+            <div id="filter">
+              <h3>Filtro</h3>
+              <hr>
+              <div class="mb-3">
+                <label for="year" class="form-label">Año</label>
+                <select class="form-select" name="year" id="year">
+                  <option value="" selected disabled>Seleccionar</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="Brand" class="form-label">Marca</label>
+                <select name="Brand" id="Brand" class="form-select">
+                  <option value="audi">Audi</option>
+                  <option value="bmw">Audi</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="model" class="form-label">Modelo</label>
+                <select name="model" id="model" class="form-select">
+                  <option selected disabled value="">Seleccionar</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="status" class="form-label">Estado</label>
+                <select name="status" id="status" class="form-select">
+                  <option value="new">Nuevo</option>
+                  <option value="used">Usado</option>
+                </select>
+              </div>
+
+              <button class="btn btn-outline-secondary w-100 btnfilter"><i class="fas fa-search"></i> Filtrar</button>
+            </div>
+          </div>
+          <div class="col-9"></div>
         </div>
       </div>
     </div>
