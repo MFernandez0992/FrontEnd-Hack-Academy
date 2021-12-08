@@ -117,15 +117,27 @@ h6 {
 
 /*****************************************************************/
 
-
-.btnfilter, .btnfilter:hover{
+#filter {
+  background-color: #f6f6f6;
+  padding: 15px 10px;
+  border: #eee 1px solid;
+}
+.filter-button,
+.filter-button :hover {
   background-color: #ff8f00;
   color: white;
   border-color: #ff8f00;
 }
-
-#filter{
-  background-color: #f6f6f6;
-  padding: 20px 15px;
-  border: 1px solid #eee;
+.badge {
+  background-color: #ff8f00;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.car img {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.exchange {
+  padding-top: 10px;
 }

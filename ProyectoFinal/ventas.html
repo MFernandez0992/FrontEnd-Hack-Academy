@@ -12,9 +12,7 @@
       content="Automotora dedicada a la venta de los mejores autos del mercado - Nuevos y Usados"
     />
     <meta name="author" content="Automotora VIP" />
-
     <title>Ventas | Automotora VIP</title>
-
     <!-- CSS de Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
@@ -22,7 +20,6 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-
     <!-- CSS Font Awesome -->
     <link
       rel="stylesheet"
@@ -31,21 +28,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <!-- CSS Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
       rel="stylesheet"
       type="text/css"
     />
-
     <!-- CSS Propio -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
-
-    <!-- Navbar -->
     <nav id="header" class="navbar navbar-expand-md fixed-top navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -90,58 +82,113 @@
         </div>
       </div>
     </nav>
-
     <div id="sales">
       <div class="container">
         <div class="row">
           <div class="col-6"><h1>Ventas</h1></div>
-          <div class="col-6"><div class="text-end"><i class="fas fa-exchange-alt"></i> UYU/USD 45.00</div></div>
+          <div class="col-6">
+            <div class="text-end pt-3">UYU/USD 45.00</div>
+          </div>
         </div>
-
+        <hr />
         <div class="row">
-          <div class="col-3">
-            <div id="filter">
+          <div class="col-lg-3">
+            <div id="filter" class="mb-3">
               <h3>Filtro</h3>
-              <hr>
               <div class="mb-3">
                 <label for="year" class="form-label">Año</label>
                 <select class="form-select" name="year" id="year">
-                  <option value="" selected disabled>Seleccionar</option>
+                  <option value="" disabled selected>seleccionar</option>
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
                 </select>
               </div>
               <div class="mb-3">
-                <label for="Brand" class="form-label">Marca</label>
-                <select name="Brand" id="Brand" class="form-select">
-                  <option value="audi">Audi</option>
-                  <option value="bmw">Audi</option>
+                <label for="year" class="form-label">Marca</label>
+                <select class="form-select" name="brand" id="brand">
+                  <option value="" disabled selected>seleccionar</option>
+                  <option value="audi">audi</option>
+                  <option value="bmw">bmw</option>
                 </select>
               </div>
               <div class="mb-3">
                 <label for="model" class="form-label">Modelo</label>
-                <select name="model" id="model" class="form-select">
-                  <option selected disabled value="">Seleccionar</option>
+                <select class="form-select" name="model" id="model">
+                  <option value="" disabled selected>seleccionar</option>
                 </select>
               </div>
               <div class="mb-3">
-                <label for="status" class="form-label">Estado</label>
-                <select name="status" id="status" class="form-select">
-                  <option value="new">Nuevo</option>
-                  <option value="used">Usado</option>
+                <label for="model" class="form-label">Estado</label>
+                <select class="form-select" name="status" id="status">
+                  <option value="" disabled selected>seleccionar</option>
+                  <option value="nuevo">nuevo</option>
+                  <option value="usado">usado</option>
                 </select>
               </div>
-
-              <button class="btn btn-outline-secondary w-100 btnfilter"><i class="fas fa-search"></i> Filtrar</button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100 filter-button"
+              >
+                <i class="fas fa-search"></i>
+                Filtrar
+              </button>
+            </div>
+            <!-- cierra filtro-->
+            <button type="button" class="btn btn-outline-secondary w-100">
+              <i class="fas fa-dollar-sign"></i>
+              Cambiar moneda
+            </button>
+          </div>
+          <!-- COl-9 es la sección de autos entera -->
+          <div class="col-lg-9">
+            <!-- Adentro de la sección autos, cada auto es un div.car -->
+            <div class="car mb-3">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="position-relative mb-3">
+                    <img
+                      src="img/cars_sales/audi_q5_2017.jpg"
+                      class="w-100"
+                      alt=""
+                    />
+                    <span class="badge">Nuevo</span>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h3>Audi Q3</h3>
+                    </div>
+                    <div class="col-lg-6">
+                      2019 | $ 92.000 | <i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                    esse asperiores, optio sed animi, sit incidunt accusantium
+                    voluptatem tempora ullam odio. Numquam sed atque commodi qui
+                    ut iste possimus omnis. Numquam sed atque commodi qui ut
+                    iste possimus omnis.
+                  </p>
+                  <button type="button" class="btn btn-success">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">
+                    <i class="far fa-plus-square"></i> Más información
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">
+                    <i class="fas fa-share-square"></i> Compartir
+                  </button>
+                </div>
+              </div>
+              <hr />
             </div>
           </div>
-          <div class="col-9"></div>
         </div>
       </div>
     </div>
-
-
-    <!-- Footer -->
     <div id="footer">
       <div class="container">
         <div class="row">
@@ -152,14 +199,12 @@
               alt="AutoVIP"
             />
           </div>
-
           <div class="col-md-3">
             <ul>
               <li><a href="ventas.html">Venta 0km</a></li>
               <li><a href="ventas.html">Venta Usados</a></li>
             </ul>
           </div>
-
           <div class="col-md-3">
             <ul>
               <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
@@ -173,14 +218,12 @@
               </li>
             </ul>
           </div>
-
           <div class="col-md-3">
             <p style="color: #ddd">Copyright &copy; AutoVIP 2021</p>
           </div>
         </div>
       </div>
     </div>
-
     <!-- jQuery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -188,17 +231,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
     <!-- Boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-
     <!-- JS de Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
     <!-- JS Propio -->
     <script src="js/app.js"></script>
   </body>
