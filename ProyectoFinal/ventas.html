@@ -109,7 +109,7 @@
 
               <div class="mb-3">
                 <label class="form-label" for="year">Año</label>
-                <select class="form-select" name="year">
+                <select v-model="selectedYear" class="form-select" name="year">
                   <option value="" disabled selected>Seleccionar...</option>
                     <option v-bind:value='year' v-for="year in years">{{year}}</option>
                 </select>
@@ -117,7 +117,8 @@
 
               <div class="mb-3">
                 <label class="form-label" for="brand">Marca</label>
-                <select class="form-select" name="brand">
+                <!-- Con v-model="variable" tomo la marca seleccionada y la envío a vue -->
+                <select v-model="selectedBrand" id="select-brand" class="form-select" name="brand">
                   <option value="" disabled selected>Seleccionar...</option>
                   <option v-bind:value="brand" v-for="brand in brands">{{brand}}</option>
                 </select>
@@ -125,14 +126,16 @@
 
               <div class="mb-3">
                 <label class="form-label" for="model">Modelo</label>
-                <select class="form-select" name="model">
+                <!-- Con v-bind:disabled le asigno un valor verdadero si el array de los modelos está vacío -->
+                <select v-model="selectedModel" v-bind:disabled="!models.length" class="form-select" name="model">
                   <option value="" disabled selected>Seleccionar...</option>
+                  <option v-bind:value="model" v-for="model in models">{{model}}</option>
                 </select>
               </div>
 
               <div class="mb-3">
                 <label class="form-label" for="select-status">Estado</label>
-                <select id="select-status" class="form-select" name="status">
+                <select v-model="selectedStatus" id="select-status" class="form-select" name="status">
                   <option value="">Seleccionar...</option>
                   <option value="1">Nuevo</option>
                   <option value="0">Usado</option>
@@ -140,6 +143,7 @@
               </div>
 
               <button
+                id="btn-filter"
                 type="button"
                 name="button"
                 class="btn btn-warning btn-sm w-100"
@@ -160,18 +164,18 @@
           </div>
 
           <div class="col-md-9">
-            <div class="car">
+            <div v-for="car in cars" class="car">
               <div class="row">
                 <div class="col-img col-lg-4">
                   <div class="position-relative">
-                    <img src="img/cars_sales/audi_q5_2017.jpg" alt="Audi Q5" />
-                    <span class="badge">Nuevo</span>
+                    <img v-bind:src="car.image" alt="Audi Q5" />
+                    <span class="badge">{{cars.status}}</span>
                   </div>
                 </div>
                 <div class="col-lg-8">
                   <div class="row">
                     <div class="col-xl-6">
-                      <h3>Audi Q5</h3>
+                      <h3>{{car.brand}} - {{car.model}}</h3>
                     </div>
 
                     <div class="col-xl-6">
