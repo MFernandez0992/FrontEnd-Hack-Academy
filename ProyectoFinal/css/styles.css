@@ -122,8 +122,8 @@ h6 {
   padding: 15px 10px;
   border: #eee 1px solid;
 }
-.filter-button,
-.filter-button :hover {
+.btn-filter,
+.btn-filter :hover {
   background-color: #ff8f00;
   color: white;
   border-color: #ff8f00;
@@ -140,4 +140,8 @@ h6 {
 }
 .exchange {
   padding-top: 10px;
+}
+
+.rating{
+  color: gold;
 }

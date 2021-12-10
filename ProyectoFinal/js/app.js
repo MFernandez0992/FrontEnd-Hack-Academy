@@ -1,70 +1,87 @@
-// Mi código JavaScript:
 var app = new Vue({
-    el: '#sales',
+    el: "#sales",
     data: {
-        exchangeRateUyu: 0,
-        years: [],
-        brands: [],
-        models: [],
-        condition: [],
-        selectedBrand: "",
-        selectedModel: "",
-        selectedYear: "",
-        selectedStatus: "",
-        cars: []
+      exchangeRateUyu: 0,
+      years: [],
+      brands: [],
+      models: [],
+      brandSelected: "",
+      modelSelected: "",
+      yearSelected: "",
+      statusSelected: "",
+      cars: [],
+      elUsuarioHizoPrimeraBusqueda: false,
+      currencyDollar: true
+    },
+    filters: {
+        filtroMiles: function(valorOriginal){
+            return valorOriginal.toLocaleString('es-UY');
+        },
     }
-    
-});
-
-// Guardo las URLs de las api dentro de variables
-var exchange = 'https://ha.edu.uy/api/rates';
-var listBrands = 'https://ha.edu.uy/api/brands';
-// var apiModels = 'https://ha.edu.uy/api/models?brand=' + selectedBrand;
-
-// Carga de Tipo de Cambio:
-$.ajax({
+  });
+  // Carga de Tipo de Cambio:
+  var exchange = "https://ha.edu.uy/api/rates";
+  $.ajax({
     url: exchange,
-    success: function (responseExchange) {
-        app.exchangeRateUyu = responseExchange.uyu;
-    }
-});
-
-// Utilizo un ciclo for que generará los años y los inyectará dentro del array years
-for (var i = 2021; i >= 1900; i--){
+    success: function (response) {
+      app.exchangeRateUyu = response.uyu;
+    },
+  });
+  // Carga de años
+  for (var i = 2021; i >= 1900; i--) {
     app.years.push(i);
-}
-
-// Cargo las marcas desde la api, guardo los valores de la api dentro de la variable responde de la function
-$.ajax({
-    url: listBrands,
-    success: function (responseBrands) {
-        app.brands = responseBrands;
-    }
-});
-
-// Cargo los modelos dependiendo de la marca seleccionada, con el evento change detecto cuando el usuario de click a una marca y llamo a la api de los modelos
-$('#select-brand').on('change', function(){
+  }
+  // Carga de las marcas
+  $.ajax({
+    url: "https://ha.edu.uy/api/brands",
+    success: function (brands) {
+      app.brands = brands;
+    },
+  });
+  // Cambio de marca
+  $("#select-brand").on("change", function () {
     $.ajax({
-        url: 'https://ha.edu.uy/api/models?brand=' + app.selectedBrand,
-        success: function(responseModels) {
-            app.models = responseModels;
-        }
-    })
+      url: "https://ha.edu.uy/api/models?brand=" + app.brandSelected,
+      success: function (models) {
+        app.models = models;
+      },
+    });
+  });
 
-})
-
-$('#btn-filter').on('click', function() {
-    var year = app.selectedYear;
-    var modelSelected = app.selectedModel;
-    var brandSelected = app.selectedBrand;
-    var status = app.selectedStatus;
-
-    console.log(year, modelSelected, brandSelected, status);
-
+  // Función reusable para cargar autos
+  function cargarAutos(){
+    var year = app.yearSelected;
+    var model = app.modelSelected;
+    var brand = app.brandSelected;
+    var status = app.statusSelected;
+    console.log(year, brand, model, status);
     $.ajax({
-        url: `https://ha.edu.uy/api/cars?year=${year}&brand=${brandSelected}&model=${modelSelected}&status=${status}`,
-        success: function (cars) {
-            app.cars = cars;
-        }
+      url:
+        "https://ha.edu.uy/api/cars?year=" +
+        year +
+        "&brand=" +
+        brand +
+        "&model=" +
+        model +
+        "&status=" +
+        status,
+      success: function (carsFromApi) {
+        app.cars = carsFromApi;
+        app.elUsuarioHizoPrimeraBusqueda = true;
+      },
+    });
+  }
+
+  // Llamo a la f cargarAutos para que se muestren los autos cuando la página se cargue
+//  cargarAutos();
+
+  // Cuando haga click en Filtrar, llamo a cargarAutos()
+  $("#btn-filter").on("click", function () {
+    cargarAutos();
+  });
+
+    // Cuando haga click en cambiar moneda, 
+    $('#btn-currency').on('click', function(){
+        //console.log('click')
+        app.currencyDollar = !app.currencyDollar;
     })
-})
